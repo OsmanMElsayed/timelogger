@@ -11,7 +11,6 @@ import { TimeEntriesModule } from 'src/app/time-entries/time-entries.module';
 describe('ProjectDetailsComponent', () => {
     let component: ProjectDetailsComponent;
     let fixture: ComponentFixture<ProjectDetailsComponent>;
-    let activatedRouteStub: any;
 
     const expectedProject: Project = {
         id: 1,
@@ -20,11 +19,11 @@ describe('ProjectDetailsComponent', () => {
         dueDate: moment()
     };
 
-    beforeEach(async(() => {
-        activatedRouteStub = {
-            data: of({ project: expectedProject })
-        };
+    const activatedRouteStub = {
+        data: of({ project: expectedProject })
+    };
 
+    beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [ ProjectDetailsComponent ],
             imports: [RouterTestingModule.withRoutes([]), SharedModule, TimeEntriesModule],

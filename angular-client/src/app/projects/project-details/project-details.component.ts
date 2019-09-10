@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
     templateUrl: './project-details.component.html'
 })
 export class ProjectDetailsComponent implements OnInit, OnDestroy {
-    
+
     private activatedRouteDataSubscription: Subscription;
 
     project: Project = null;

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 import { TimeEntryCreationFormComponent } from './time-entry-creation-form/time-entry-creation-form.component';
 import { SharedModule } from '../shared/shared.module';
 import { TimeEntriesService } from './time-entries.service';

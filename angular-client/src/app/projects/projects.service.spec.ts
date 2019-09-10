@@ -15,7 +15,6 @@ describe('ProjectsService', () => {
                 expect(p.length).toBe(4);
             });
         })));
-      
     });
 
     describe('getProject()', () => {
@@ -27,6 +26,5 @@ describe('ProjectsService', () => {
                 expect(p.id).toBe(1);
             });
         })));
-      
     });
 });

@@ -7,34 +7,34 @@ import { Project } from './project.model';
 export class ProjectsService {
 
     private projects: Project[] = [
-        { 
+        {
             id: 1,
-            title: "Logo Design",
-            customer: "Company A",
+            title: 'Logo Design',
+            customer: 'Company A',
             dueDate: moment({ year: 2019, month: 8, day: 10, hour: 1, minutes: 44 })
         },
-        { 
+        {
             id: 2,
-            title: "Website",
-            customer: "Company B",
+            title: 'Website',
+            customer: 'Company B',
             dueDate: moment({ year: 2019, month: 9, day: 10, hour: 4, minutes: 44 })
         },
-        { 
+        {
             id: 3,
-            title: "ERP",
-            customer: "Company C",
+            title: 'ERP',
+            customer: 'Company C',
             dueDate: moment({ year: 2022, month: 8, day: 10, hour: 4, minutes: 44 })
         },
-        { 
+        {
             id: 4,
-            title: "Consultancy",
-            customer: "Company D",
+            title: 'Consultancy',
+            customer: 'Company D',
             dueDate: moment({ year: 2019, month: 1, day: 10, hour: 4, minutes: 44 })
         },
     ];
 
     getProjects(): Observable<Project[]> {
-        return of(this.projects)
+        return of(this.projects);
     }
 
     getProject(id: number): Observable<Project> {

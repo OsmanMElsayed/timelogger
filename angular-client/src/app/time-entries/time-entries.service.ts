@@ -9,7 +9,7 @@ export class TimeEntriesService {
     private timeEntries: TimeEntry[] = [
         {
             id: 1,
-            projectId:1,
+            projectId: 1,
             duration: moment.duration({ days: 2, hours: 3 }),
             memo: 'Logo design'
         }

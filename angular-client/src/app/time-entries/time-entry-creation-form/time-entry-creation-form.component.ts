@@ -19,9 +19,9 @@ export class TimeEntryCreationFormComponent implements OnInit, OnDestroy {
     project: Project = null;
 
     constructor(private formBuilder: FormBuilder,
-        private timeEntriesService: TimeEntriesService,
-        private activatedRoute: ActivatedRoute,
-        private router: Router) {
+                private timeEntriesService: TimeEntriesService,
+                private activatedRoute: ActivatedRoute,
+                private router: Router) {
 
         this.timeEntryCreationForm = this.formBuilder.group({
             numberOfDays: [0, [Validators.required, Validators.min(0)]],
@@ -50,12 +50,12 @@ export class TimeEntryCreationFormComponent implements OnInit, OnDestroy {
         const timeEntry: TimeEntry = {
             id: 0,
             projectId: this.project.id,
-            duration: moment.duration({ 
-                days: this.timeEntryCreationForm.value['numberOfDays'],
-                hours: this.timeEntryCreationForm.value['numberOfHours'],
-                minutes: this.timeEntryCreationForm.value['numberOfMinutes'],
+            duration: moment.duration({
+                days: this.timeEntryCreationForm.value.numberOfDays,
+                hours: this.timeEntryCreationForm.value.numberOfHours,
+                minutes: this.timeEntryCreationForm.value.numberOfMinutes,
             }),
-            memo: this.timeEntryCreationForm.value['memo']
+            memo: this.timeEntryCreationForm.value.memo
         };
 
         this.timeEntriesService.create(timeEntry).subscribe(() => {

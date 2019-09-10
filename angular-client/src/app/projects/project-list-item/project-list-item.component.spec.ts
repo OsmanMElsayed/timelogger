@@ -32,13 +32,13 @@ describe('ProjectListItemComponent', () => {
                 dueDate: moment()
             };
             component.project = project;
-            
+
             // act
             const result: string = component.dueDateFromNow;
 
             // assert
             expect(result).toBe(project.dueDate.fromNow());
         });
-        
+
     });
 });

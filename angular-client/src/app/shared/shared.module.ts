@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 
-
-
 @NgModule({
   declarations: [NavBarComponent, PageHeaderComponent],
   imports: [

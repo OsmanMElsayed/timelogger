@@ -5,9 +5,9 @@ import { Component, Input } from '@angular/core';
     templateUrl: './page-header.component.html'
 })
 export class PageHeaderComponent {
-    
+
     @Input()
-    title: string = "Page Title!";
+    title = 'Page Title!';
 
     @Input()
     text: string = null;

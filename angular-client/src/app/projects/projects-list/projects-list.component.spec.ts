@@ -31,7 +31,7 @@ describe('ProjectsListComponent', () => {
 
     beforeEach(async(() => {
         projectsServiceSpy = jasmine.createSpyObj('ProjectsService', ['getProjects']);
-        projectsServiceSpy.getProjects.and.returnValue(of(expectedProjects))
+        projectsServiceSpy.getProjects.and.returnValue(of(expectedProjects));
 
         TestBed.configureTestingModule({
           declarations: [ ProjectsListComponent, ProjectListItemComponent ],
@@ -57,6 +57,6 @@ describe('ProjectsListComponent', () => {
             // assert
             expect(component.projects).toBe(expectedProjects);
         });
-        
+
     });
 });
