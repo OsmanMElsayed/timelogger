@@ -1,0 +1,10 @@
+<div class="card mb-4">
+    <h5 class="card-header">{{project.title}}</h5>
+    <div class="col-md-10">
+        <div class="card-body">
+            <h5 class="card-title">{{project.customer}}</h5>
+            <p class="card-text"><small class="text-muted">Due {{dueDateFromNow}}</small></p>
+            <a [routerLink]="['/projects', project.id]" class="btn btn-primary">View Details</a>
+        </div>
+    </div>
+</div>

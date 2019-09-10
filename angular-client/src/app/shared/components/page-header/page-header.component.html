@@ -1,0 +1,7 @@
+<div class="jumbotron jumbotron-fluid py-4">
+    <div class="container">
+        <h1 class="display-4">{{title}}</h1>
+        <p class="lead" *ngIf="showText">{{text}}</p>
+        <ng-content></ng-content>
+    </div>
+</div>

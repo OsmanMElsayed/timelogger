@@ -1,0 +1,21 @@
+<app-page-header [title]="project.title" [text]="project.customer">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a [routerLink]="['']">Projects</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{project.title}}</li>
+        </ol>
+    </nav>
+</app-page-header>
+
+<div class="container">
+    <div class="card">
+        <h5 class="card-header">Time Entries</h5>
+        <div class="card-body">
+            <a [routerLink]="['/projects', project.id, 'timeentries', 'new']" class="btn btn-primary mt-1 mb-4">
+                Create a New Time Entry
+            </a>
+
+            <app-time-entries-list [projectId]="project.id"></app-time-entries-list>
+        </div>
+    </div>
+</div>
